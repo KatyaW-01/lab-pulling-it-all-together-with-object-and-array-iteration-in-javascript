@@ -120,7 +120,7 @@ function numPointsScored(playerName) {
     let homePlayers = object.home.players
     let awayPlayers = object.away.players
 
-    if(Object.keys(homePlayers).includes(playerName)){
+    if(Object.keys(homePlayers).includes(playerName)) {
         return homePlayers[playerName].points
     } else {
         return awayPlayers[playerName].points
@@ -128,3 +128,5 @@ function numPointsScored(playerName) {
 }
 
 console.log(numPointsScored("Jeff Adrien"))
+console.log(numPointsScored('Mason Plumlee'))
+
