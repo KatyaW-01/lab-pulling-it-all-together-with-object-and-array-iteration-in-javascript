@@ -127,6 +127,21 @@ function numPointsScored(playerName) {
     }
 }
 
+function shoeSize(playerName) {
+    let object = gameObject()
+    let homePlayers = object.home.players
+    let awayPlayers = object.away.players
+
+    if(Object.keys(homePlayers).includes(playerName)) {
+        return homePlayers[playerName].shoe
+    } else {
+        return awayPlayers[playerName].shoe
+    }
+}
+
 console.log(numPointsScored("Jeff Adrien"))
 console.log(numPointsScored('Mason Plumlee'))
+
+console.log(shoeSize("Brook Lopez"))
+console.log(shoeSize("DeSagna Diop"))
 
