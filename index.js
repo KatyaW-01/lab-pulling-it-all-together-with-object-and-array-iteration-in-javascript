@@ -225,6 +225,12 @@ function bigShoeRebounds() {
 console.log(numPointsScored("Jeff Adrien"))
 console.log(numPointsScored('Mason Plumlee'))
 
+console.log(teamColors("Charlotte Hornets"))
+
+console.log(teamNames())
+
+console.log(playerStats("Ben Gordon"))
+
 console.log(shoeSize("Brook Lopez"))
 console.log(shoeSize("DeSagna Diop"))
 
