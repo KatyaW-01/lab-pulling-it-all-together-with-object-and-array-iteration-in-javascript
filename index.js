@@ -148,6 +148,15 @@ function teamColors(teamName) {
     }
 }
 
+function teamNames() {
+    const teamNamesArray = []
+    let object = gameObject()
+    teamNamesArray.push(object.home.teamName)
+    teamNamesArray.push(object.away.teamName)
+
+    return teamNamesArray
+}
+
 console.log(numPointsScored("Jeff Adrien"))
 console.log(numPointsScored('Mason Plumlee'))
 
