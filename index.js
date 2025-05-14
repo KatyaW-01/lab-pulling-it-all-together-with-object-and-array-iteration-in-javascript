@@ -157,9 +157,28 @@ function teamNames() {
     return teamNamesArray
 }
 
+function playerNumbers(teamName) {
+    let object = gameObject()
+    let homePlayers = object.home.players
+    let awayPlayers = object.away.players
+    const jerseyNums = []
+    if(object.home.teamName === teamName) {
+        for (const key in homePlayers){
+            jerseyNums.push(homePlayers[key]['number'])
+        }
+    } else {
+        for (const key in awayPlayers){
+            jerseyNums.push(awayPlayers[key]['number'])
+        }
+    }
+    return jerseyNums
+}
+
 console.log(numPointsScored("Jeff Adrien"))
 console.log(numPointsScored('Mason Plumlee'))
 
 console.log(shoeSize("Brook Lopez"))
 console.log(shoeSize("DeSagna Diop"))
+
+console.log(playerNumbers("Brooklyn Nets"))
 
