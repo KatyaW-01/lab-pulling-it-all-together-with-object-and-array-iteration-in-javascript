@@ -174,6 +174,18 @@ function playerNumbers(teamName) {
     return jerseyNums
 }
 
+function playerStats(playerName) {
+    let object = gameObject()
+    let homePlayers = object.home.players
+    let awayPlayers = object.away.players
+
+    if(Object.keys(homePlayers).includes(playerName)) {
+        return homePlayers[playerName]
+    } else {
+        return awayPlayers[playerName]
+    }
+}
+
 console.log(numPointsScored("Jeff Adrien"))
 console.log(numPointsScored('Mason Plumlee'))
 
