@@ -141,7 +141,11 @@ function shoeSize(playerName) {
 
 function teamColors(teamName) {
     let object = gameObject()
- 
+    if (object.home.teamName === teamName){
+        return object.home.colors
+    } else {
+        return object.away.colors
+    }
 }
 
 console.log(numPointsScored("Jeff Adrien"))
