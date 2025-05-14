@@ -139,6 +139,11 @@ function shoeSize(playerName) {
     }
 }
 
+function teamColors(teamName) {
+    let object = gameObject()
+ 
+}
+
 console.log(numPointsScored("Jeff Adrien"))
 console.log(numPointsScored('Mason Plumlee'))
 
