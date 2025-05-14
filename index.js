@@ -186,6 +186,42 @@ function playerStats(playerName) {
     }
 }
 
+function bigShoeRebounds() {
+    let object = gameObject()
+    let homePlayers = object.home.players
+    let awayPlayers = object.away.players
+    
+    
+    let shoeArray = []
+
+    for (const key in homePlayers){
+        shoeArray.push(homePlayers[key]['shoe'])
+    }
+
+    for (const key in awayPlayers){
+        shoeArray.push(awayPlayers[key]['shoe'])
+    }
+
+    let maxShoeSize = Math.max(...shoeArray)
+
+    for (const key in homePlayers){
+        if(homePlayers[key].shoe === maxShoeSize){
+            return homePlayers[key].rebounds
+        } else {
+            continue
+        }
+    }
+
+    for (const key in homePlayers){
+        if(awayPlayers[key].shoe === maxShoeSize){
+            return awayPlayers[key].rebounds
+        } else {
+            continue
+        }
+    }
+    // maybe there is a more efficient way to do this with less loops, but it works so I will leave it be for now
+}
+
 console.log(numPointsScored("Jeff Adrien"))
 console.log(numPointsScored('Mason Plumlee'))
 
@@ -193,4 +229,6 @@ console.log(shoeSize("Brook Lopez"))
 console.log(shoeSize("DeSagna Diop"))
 
 console.log(playerNumbers("Brooklyn Nets"))
+
+console.log(bigShoeRebounds())
 
